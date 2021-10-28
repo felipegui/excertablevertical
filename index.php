@@ -7,13 +7,23 @@ $array = [
     'Color'=> "Blue",
     'Profession'=> "Development Web"
 ];
+
+$keys = array_keys($array);
+$values = array_values($array);
 ?>
 
+
+
 <table border="1">
-    <?php foreach( $array as $key => $value ): ?>
-        <tr>
-            <th><?php echo $key ?></th>
-            <td><?php echo $value ?></td>
-        </tr>
-    <?php endforeach; ?>
+    <tr>
+        <?php foreach( $keys as $key ): ?>
+            <th><?php echo $key; ?></th>
+        <?php endforeach; ?>
+    </tr>
+
+    <tr>
+        <?php foreach( $values as $value ): ?>
+            <th><?php echo $value; ?></th>
+        <?php endforeach; ?>
+    </tr>
 </table>
